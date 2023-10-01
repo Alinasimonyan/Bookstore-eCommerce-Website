@@ -10,7 +10,7 @@ export const ListView = () => {
 
         return (
           <div key={id} className="book-div">
-            <img src={image} alt={title} />
+            <img src={image} alt={title} style={{ borderRadius: "5px" }} />
             <p>
               {title} by {author}
             </p>

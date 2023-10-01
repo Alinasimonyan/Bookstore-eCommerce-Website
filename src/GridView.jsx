@@ -9,7 +9,7 @@ export const GridView = () => {
         const { id, title, genre, author, image, publisher, price } = product;
         return (
           <div key={id}>
-            <img src={image} alt={title} />
+            <img src={image} alt={title} style={{ borderRadius: "5px" }} />
             <p>
               {title} by {author}
             </p>

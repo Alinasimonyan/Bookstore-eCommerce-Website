@@ -15,12 +15,11 @@ export const BookList = () => {
   return (
     <>
       <Quote />
-
       <div className="products-main">
-        <Grid_List_Btn />
-        <Sort />
         <Filters />
         <div>
+          <Sort />
+          <Grid_List_Btn />
           {grid_view ? (
             <GridView products={products} />
           ) : (

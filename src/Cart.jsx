@@ -1,3 +1,3 @@
 export const Cart = () => {
-  return <div className="cart">Cart</div>;
+  return <div style={{ marginTop: "150px", marginLeft: "450px" }}>Cart</div>;
 };

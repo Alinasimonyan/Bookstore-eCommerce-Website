@@ -106,9 +106,10 @@ export const Filters = () => {
 };
 
 const Wrapper = styled.section`
-
+  margin-top: 50px;
   .form-control {
     margin-bottom: 1.25rem;
+    margin-right: 70px;
     h5 {
       margin-bottom: 0.5rem;
     }
@@ -119,6 +120,7 @@ const Wrapper = styled.section`
     border-radius: var(--radius);
     border-color: transparent;
     letter-spacing: var(--spacing);
+    width: 100px;
   }
   .search-input::placeholder {
     text-transform: capitalize;
@@ -142,6 +144,7 @@ const Wrapper = styled.section`
     border-radius: 0.25rem;
     border-color: transparent;
     padding: 0.25rem;
+    width: 120px;
   }
 
   .all-btn {
@@ -174,7 +177,7 @@ const Wrapper = styled.section`
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     margin-top: 20px;
-    margin-left: 440px;
+    margin-left: 300px;
   }
   @media (min-width: 768px) {
     .content {
