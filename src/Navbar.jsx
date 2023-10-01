@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { BsCart3 } from "react-icons/bs";
 
 export const Navbar = () => {
   return (
@@ -9,7 +10,9 @@ export const Navbar = () => {
         <NavLink to="/books">Books</NavLink>
       </div>
       <div className="cart-login">
-        <NavLink to="/cart">Cart</NavLink>
+        <NavLink to="/cart">
+          Cart <BsCart3 />
+        </NavLink>
         <NavLink to="login">Login</NavLink>
       </div>
     </div>

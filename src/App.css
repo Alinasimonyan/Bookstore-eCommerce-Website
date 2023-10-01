@@ -12,12 +12,12 @@ img {
   margin-right: 30px;
 }
 
-.product-section {
+/* .product-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 100px;
-  margin-top: 100px;
-}
+  margin-top: 50px;
+} */
 
 .filter-section {
   display: flex;
@@ -46,42 +46,29 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   margin-left: 320px;
-  margin: 20px;
 }
 
 a {
+  font-size: larger;
   text-decoration: none;
+  color: rgb(54, 54, 54);
 }
 
 .quote-section {
-  background-color: #d7cdc2;
+  background-color: #6a6363;
+  color: white;
   height: 70px;
   padding: 5px;
+  margin: 0;
 }
 
 .quote-text {
   text-align: end;
   font-style: italic;
   margin-right: 120px;
-}
-
-.paginateContainer {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  height: 40px;
-  width: 70px;
-  margin-left: 720px;
-  margin-top: -700px;
-}
-
-.paginateContainer a {
-  padding: 5px;
-  margin: 10px;
-  border-radius: 5px;
-  color: black;
-  cursor: pointer;
 }
 
 .loginForm {
@@ -91,9 +78,9 @@ a {
   margin: 150px auto;
   border-radius: 10px;
   border: 0px solid;
-  padding: 35px;
+  padding: 55px;
   padding-bottom: 15px;
-  background-color: rgb(216, 195, 195);
+  background-color: rgb(236, 230, 230);
   color: rgb(4, 3, 3);
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -131,7 +118,7 @@ a {
 }
 
 .register-now {
-  color: rgb(116, 87, 87);
+  color: rgb(137, 137, 137);
 }
 
 .register-now:hover {
@@ -176,27 +163,11 @@ li:hover {
   cursor: pointer;
 }
 
-.category-filter {
-  margin: 30px;
-}
-
 .products-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 250px;
-}
-
-.display-book-section {
-  margin-top: 110px;
-}
-
-.paginate-container {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-  margin: 20px;
-  list-style: none;
+  margin-top: 10px;
+  margin-right: 150px;
 }
 
 .grid-list-btn {
@@ -220,7 +191,45 @@ li:hover {
   width: 100%;
 }
 
-.products {
+.home-first {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  margin-left: 250px;
+  margin-right: 100px;
 }
+
+.home-first-info {
+  margin-top: -30px;
+  margin-right: 70px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.home-first img {
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.home-first h1 {
+  font-size: xxx-large;
+}
+
+.home-first p {
+  font-size: x-large;
+  color: rgb(161, 156, 156);
+}
+
+.home-first button {
+  background: hsl(360, 67%, 44%);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin-top: 20px;
+  border-color: transparent;
+}
+
+/* .events-div {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-top: 150px;
+  margin-left: 270px;
+} */

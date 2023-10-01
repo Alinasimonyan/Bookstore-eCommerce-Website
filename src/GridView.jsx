@@ -23,7 +23,7 @@ export const GridView = () => {
 
 const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 20px;
 
   img {
@@ -34,6 +34,6 @@ const Wrapper = styled.section`
   }
 
   .book-div {
-    margin: 200px;
+    margin: 350px;
   }
 `;
