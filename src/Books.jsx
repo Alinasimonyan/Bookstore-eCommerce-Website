@@ -15,7 +15,7 @@ export const BookList = () => {
   return (
     <>
       <Quote />
-      <div className="products-main">
+      <Wrapper>
         <Filters />
         <div>
           <Sort />
@@ -26,9 +26,16 @@ export const BookList = () => {
             <ListView products={products} />
           )}
         </div>
-      </div>
+      </Wrapper>
     </>
   );
 };
 
 //------------------------------------WRAPPER-----------------------------------
+
+const Wrapper = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  margin-right: 150px;
+`;

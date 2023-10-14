@@ -117,9 +117,8 @@ const Wrapper = styled.section`
   .search-input {
     padding: 0.5rem;
     background: hsl(210, 36%, 96%);
-    border-radius: var(--radius);
+    border-radius: 5px;
     border-color: transparent;
-    letter-spacing: var(--spacing);
     width: 100px;
   }
   .search-input::placeholder {
@@ -176,13 +175,7 @@ const Wrapper = styled.section`
     color: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    margin-top: 20px;
-    margin-left: 300px;
-  }
-  @media (min-width: 768px) {
-    .content {
-      position: sticky;
-      top: 1rem;
-    }
+    margin-top: 50px;
+    margin-left: 90px;
   }
 `;

@@ -1,24 +1,21 @@
 import styled from "styled-components";
 import { useFilterContext } from "./BookReducer";
+import Product from "./Product";
 
 export const ListView = () => {
   const { filtered_products: products } = useFilterContext();
   return (
-    <Wrapper>
-      {products.map((product) => {
-        const { id, title, genre, author, image, publisher, price } = product;
-
-        return (
-          <div key={id} className="book-div">
-            <img src={image} alt={title} style={{ borderRadius: "5px" }} />
-            <p>
-              {title} by {author}
-            </p>
-            ${price}
-          </div>
-        );
-      })}
-    </Wrapper>
+    <>
+      <Wrapper>
+        {products.map((product) => {
+          return (
+            <div key={product.id}>
+              <Product {...product} />
+            </div>
+          );
+        })}
+      </Wrapper>
+    </>
   );
 };
 

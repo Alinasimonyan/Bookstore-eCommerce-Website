@@ -65,8 +65,12 @@ a {
   color: rgb(54, 54, 54);
 }
 
+.home-about-books a:hover {
+  border-bottom: 1.5px solid rgb(114, 114, 114);
+}
+
 .quote-section {
-  background-color: #6a6363;
+  background-color: #621111;
   color: white;
   height: 70px;
   padding: 5px;
@@ -171,13 +175,6 @@ li:hover {
   cursor: pointer;
 }
 
-.products-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
-  margin-right: 150px;
-}
-
 .grid-list-btn {
   display: flex;
   justify-content: center;
@@ -241,3 +238,11 @@ li:hover {
   margin-top: 150px;
   margin-left: 270px;
 } */
+
+h5 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}

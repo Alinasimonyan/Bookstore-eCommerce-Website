@@ -45,6 +45,7 @@ export const Products = [
     publisher: Princeton_University_Press,
     price: 22.85,
     image: mimesis,
+    stars: 4.4,
   },
   {
     id: 2,
@@ -56,6 +57,7 @@ export const Products = [
     publisher: "Copper Canyon Press",
     price: 12.49,
     image: wind,
+    stars: 3.4,
   },
   {
     id: 3,
@@ -67,6 +69,7 @@ export const Products = [
     publisher: Routledge,
     price: 24.62,
     image: lines,
+    stars: 4.2,
   },
 
   {
@@ -80,6 +83,7 @@ export const Products = [
     publisher: Princeton_University_Press,
     price: 30.45,
     image: hongKong,
+    stars: 3.4,
   },
   {
     id: 5,
@@ -91,6 +95,7 @@ export const Products = [
     publisher: Routledge,
     price: 15.45,
     image: sphere,
+    stars: 2.4,
   },
   {
     id: 6,
@@ -102,6 +107,7 @@ export const Products = [
     publisher: Simon_and_Schuster,
     price: 42.15,
     image: saul_leiter,
+    stars: 4.4,
   },
   {
     id: 7,
@@ -113,6 +119,7 @@ export const Products = [
     publisher: Columbia_University_Press,
     price: 34.12,
     image: reductionism,
+    stars: 4.4,
   },
   {
     id: 8,
@@ -124,6 +131,7 @@ export const Products = [
     publisher: Simon_and_Schuster,
     price: 20.05,
     image: kazuo,
+    stars: 5.4,
   },
 
   {
@@ -136,6 +144,7 @@ export const Products = [
     publisher: Edinburgh_University_Press,
     price: 19.43,
     image: asian_cinemas,
+    stars: 3.3,
   },
 
   {
@@ -148,6 +157,7 @@ export const Products = [
     publisher: Edinburgh_University_Press,
     price: 50.15,
     image: jonas,
+    stars: 3.2,
   },
   {
     id: 11,
@@ -159,6 +169,7 @@ export const Products = [
     publisher: Edinburgh_University_Press,
     price: 15.67,
     image: anselm,
+    stars: 4.4,
   },
   {
     id: 12,
@@ -170,6 +181,7 @@ export const Products = [
     publisher: Columbia_University_Press,
     price: 19.45,
     image: fog,
+    stars: 3.4,
   },
   {
     id: 13,
@@ -181,6 +193,7 @@ export const Products = [
     publisher: Simon_and_Schuster,
     price: 45.34,
     image: memory_place,
+    stars: 4.4,
   },
   {
     id: 14,
@@ -192,6 +205,7 @@ export const Products = [
     publisher: Simon_and_Schuster,
     price: 50,
     image: takesada,
+    stars: 4.4,
   },
   {
     id: 15,
@@ -214,6 +228,7 @@ export const Products = [
     publisher: Princeton_University_Press,
     price: 21.89,
     image: haneke,
+    stars: 4.4,
   },
   {
     id: 17,
@@ -225,6 +240,7 @@ export const Products = [
     publisher: "Ricordi",
     price: 50,
     image: yann,
+    stars: 4.4,
   },
 
   {
@@ -237,6 +253,7 @@ export const Products = [
     publisher: Routledge,
     price: 34.67,
     image: gothic_music,
+    stars: 4.4,
   },
 
   {
@@ -249,6 +266,7 @@ export const Products = [
     publisher: Simon_and_Schuster,
     price: 70.56,
     image: tarkovsky,
+    stars: 4.4,
   },
   {
     id: 20,
@@ -260,6 +278,7 @@ export const Products = [
     publisher: Columbia_University_Press,
     price: 56.76,
     image: music,
+    stars: 4.4,
   },
   {
     id: 21,
@@ -271,5 +290,6 @@ export const Products = [
     publisher: Routledge,
     price: 14.35,
     image: four,
+    stars: 4.4,
   },
 ];
