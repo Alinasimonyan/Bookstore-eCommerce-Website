@@ -13,15 +13,6 @@ export const Filters = () => {
   const genres = getCategories(all_products, "genre");
   const publishers = getCategories(all_products, "publisher");
 
-  // const formatPrice = (number) => {
-  //   return new Intl.NumberFormat("en-US", {
-  //     style: "currency",
-  //     currency: "USD",
-  //   }).format(number / 100);
-  // };
-
-  console.log(price);
-
   return (
     <Wrapper>
       <div className="filter-section">
@@ -114,6 +105,12 @@ const Wrapper = styled.section`
       margin-bottom: 0.5rem;
     }
   }
+
+  .filter-section {
+    display: flex;
+    justify-content: right;
+  }
+
   .search-input {
     padding: 0.5rem;
     background: hsl(210, 36%, 96%);

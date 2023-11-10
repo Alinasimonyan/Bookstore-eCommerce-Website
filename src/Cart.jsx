@@ -13,7 +13,7 @@ export const Cart = () => {
       <div className="section">
         <div className="section-center">
           <CartColumns />
-          {cart.map((item) => {
+          {cart?.map((item) => {
             return <CartItem key={item.id} {...item} />;
           })}
           <hr />

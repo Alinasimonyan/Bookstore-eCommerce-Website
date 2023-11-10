@@ -13,7 +13,7 @@ const initialState = {
   all_products: [],
   filtered_products: [],
   grid_view: true,
-  sort: "price-lowest",
+  sort: "",
   filters: {
     text: "",
     genre: "All",
@@ -47,11 +47,28 @@ const reducer = (state, action) => {
   if (action.type === SET_LIST_VIEW) {
     return { ...state, grid_view: false };
   }
+
   if (action.type === UPDATE_SORT) {
     return {
       ...state,
       sort: action.payload,
     };
+  }
+
+  if (action.type === SORT_PRODUCTS) {
+    const { sort, filtered_products } = state;
+    let sorted_products = [];
+    if (sort === "price-lowest") {
+      sorted_products = filtered_products.sort((a, b) => {
+        return a.price - b.price;
+      });
+    }
+    if (sort === "price-highest") {
+      sorted_products = filtered_products.sort((a, b) => {
+        return b.price - a.price;
+      });
+    }
+    return { ...state, filtered_products: sorted_products };
   }
 
   if (action.type === UPDATE_FILTERS) {
@@ -91,22 +108,6 @@ const reducer = (state, action) => {
     return { ...state, filtered_products: tempProducts };
   }
 
-  if (action.type === SORT_PRODUCTS) {
-    const { sort, filtered_products } = state;
-    let sorted_products = [];
-    if (sort === "price-lowest") {
-      sorted_products = filtered_products.sort((a, b) => {
-        return a.price - b.price;
-      });
-    }
-    if (sort === "price-highest") {
-      sorted_products = filtered_products.sort((a, b) => {
-        return b.price - a.price;
-      });
-    }
-    return { ...state, filtered_products: sorted_products };
-  }
-
   if (action.type === CLEAR_FILTERS) {
     return {
       ...state,
@@ -136,9 +137,12 @@ export const FilterProvider = ({ children }) => {
   }, [Products]);
 
   useEffect(() => {
-    dispatch({ type: SORT_PRODUCTS });
     dispatch({ type: FILTER_PRODUCTS });
-  }, [state.sort, state.filters]);
+  }, [state.filters]);
+
+  useEffect(() => {
+    dispatch({ type: SORT_PRODUCTS });
+  }, [state.sort]);
 
   const setGridView = () => {
     dispatch({ type: SET_GRID_VIEW });

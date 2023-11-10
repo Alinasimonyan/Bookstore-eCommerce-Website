@@ -1,13 +1,13 @@
 import { useFilterContext } from "./BookReducer";
 import styled from "styled-components";
-import { Grid_List_Btn } from "./Grid_List_Btn";
 
 export const Sort = () => {
-  const { sort, updateSort, filtered_products: products } = useFilterContext();
+  const { sort, updateSort, filtered_products } = useFilterContext();
 
+  console.log(filtered_products);
   return (
     <Wrapper>
-      <p>{products.length} Books Found</p>
+      <p>{filtered_products.length} Books Found</p>
       <hr />
       <form className="form">
         <label htmlFor="sort"> Sort By </label>

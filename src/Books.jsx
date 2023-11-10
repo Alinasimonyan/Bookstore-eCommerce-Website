@@ -38,4 +38,8 @@ const Wrapper = styled.section`
   grid-template-columns: 1fr 1fr;
   margin-top: 50px;
   margin-right: 150px;
+
+  @media (max-width: 675px) {
+  
+  }
 `;

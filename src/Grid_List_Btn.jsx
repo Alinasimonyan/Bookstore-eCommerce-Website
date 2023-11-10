@@ -50,4 +50,22 @@ column-gap: 2rem;
       font-size: 1rem;
     }
   }
+
+  .grid-list-btn {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .list-active {
+    background-color: rgb(124, 101, 101);
+    color: white;  
+  }
+
+  .grid-active {
+    background-color: rgb(124, 101, 101);
+    color: white;
+    /* box-shadow: 2px 2px 5px #b4b0ae; */
+  }
+
+ 
 `;

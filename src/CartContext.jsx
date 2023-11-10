@@ -1,31 +1,19 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { get } from "react-hook-form";
 
-// const getFromLocalStorage = () => {
-//   const data = localStorage.getItem("cart");
-//   if (data) {
-//     const result = JSON.parse(localStorage.getItem(data) || " []");
-//     console.log(`This is data ${result}`);
-//     return result;
-//   } else {
-//     return [];
-//   }
-// };
-
-const getFromLocalStorage = JSON.parse(localStorage.getItem("cart"));
-console.log(getFromLocalStorage);
+const getFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
 const initialState = {
   cart: getFromLocalStorage,
-  total_items: 0,
-  total_amount: 0,
   shipping_fee: 25,
+  total_price: 0,
 };
 
+console.log(initialState.cart);
 const ADD_TO_CART = "ADD_TO_CART";
 const TOGGLE_AMOUNT = "TOGGLE_AMOUNT";
 const REMOVE_ITEM = "REMOVE_ITEM";
 const CLEAR_CART = "CLEAR_CART";
+const CALCULATE_TOTALS = "CALCULATE_TOTALS";
 
 const reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {
@@ -74,6 +62,18 @@ const reducer = (state, action) => {
     });
     return { ...state, cart: tempCart };
   }
+  console.log(state.cart);
+  if (action.type === CALCULATE_TOTALS) {
+    let total_price = state.cart.reduce((total, item) => {
+      total = total + item.amount * item.price;
+      return total;
+    }, 0);
+    if (total_price) {
+      return { ...state, total_price };
+    } else {
+      return { ...state };
+    }
+  }
 
   throw new Error(`No matching ${action.type} - action type`);
 };
@@ -101,6 +101,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cart));
+    dispatch({ type: CALCULATE_TOTALS });
   }, [state.cart]);
 
   return (

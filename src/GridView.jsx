@@ -1,17 +1,9 @@
 import styled from "styled-components";
 import { useFilterContext } from "./BookReducer";
 import Product from "./Product";
-import { useEffect, useState } from "react";
 
 export const GridView = () => {
   const { filtered_products: products } = useFilterContext();
-
-  console.log(products);
-  // const [data, setData] = useState([]);
-
-  // useEffect(() => {
-  //   setData(products);
-  // }, []);
 
   return (
     <>
@@ -30,10 +22,11 @@ export const GridView = () => {
 
 const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 35px;
+  column-gap: 45px;
   padding: 25px;
-
+  font-size: 11px;
   img {
     display: block;
     width: 130px;
@@ -43,5 +36,10 @@ const Wrapper = styled.section`
 
   .book-div {
     margin: 350px;
+  }
+
+  @media (max-width: 675px) {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 `;

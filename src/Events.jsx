@@ -25,6 +25,7 @@ const Wrapper = styled.section`
   background: hsl(210, 36%, 96%);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-top: 150px;
+
   .single-event {
     margin: 4rem auto;
     display: grid;
