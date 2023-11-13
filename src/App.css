@@ -10,34 +10,7 @@
   margin-right: 100px;
 }
 
-.genre-div {
-  display: flex;
-  flex-direction: column;
-}
 
-.genre-btn {
-  border-color: transparent;
-  background-color: white;
-  margin: 2px;
-}
-
-.genre-btn:hover {
-  cursor: pointer;
-}
-
-.category_filter {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.filter-btn {
-  border-color: transparent;
-  background-color: white;
-}
-
-.filter-btn:hover {
-  cursor: pointer;
-}
 
 .booksDisplayed-section {
   width: 100%;

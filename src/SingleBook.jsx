@@ -7,7 +7,6 @@ import { Products } from "./Products";
 
 export const SingleBook = () => {
   const { productID } = useParams();
- 
 
   const product = Products.find((product) => product.id === +productID);
   console.log(product);
@@ -50,10 +49,10 @@ export const SingleBook = () => {
 
 const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
   padding: 25px;
-  margin-top: 120px;
-  margin-left: 70px;
+  margin-top: 5em;
+  margin-left: 5em;
 
   img {
     width: 250px;
@@ -64,9 +63,8 @@ const Wrapper = styled.section`
 
   .single-book-info {
     width: 500px;
-    font-size: 15pt;
-    margin-left: 30px;
-    margin-left: -150px;
+    font-size: 1.5rem;
+    margin-left: 2%;
   }
   .single-book-info h3 {
     font-style: italic;
@@ -87,5 +85,29 @@ const Wrapper = styled.section`
 
   .add-to-cart-btn: hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 675px) {
+    display: grid;
+    grid-template-column: 1fr 1fr;
+    margin-top: 1em;
+    margin-left: 1em;
+
+    img {
+      width: 12em;
+      height: 15em;
+      border-radius: 5px;
+    }
+
+    .single-book-info {
+      margin-top: 0;
+      margin-left: 3em;
+      font-size: 1.2rem;
+      width: 70%;
+    }
+
+    .single-book-info h2 {
+      margin-top: 2.5%;
+    }
   }
 `;

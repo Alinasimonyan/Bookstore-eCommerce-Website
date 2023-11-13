@@ -33,4 +33,7 @@ const Wrapper = styled.section`
   .form {
     margin-top: 20px;
   }
+
+  @media (max-width: 675px) {
+  }
 `;

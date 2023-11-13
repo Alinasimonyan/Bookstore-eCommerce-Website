@@ -9,7 +9,7 @@ export const ListView = () => {
       <Wrapper>
         {products.map((product) => {
           return (
-            <div key={product.id}>
+            <div key={product.id} className="book">
               <Product {...product} />
             </div>
           );
@@ -25,13 +25,8 @@ const Wrapper = styled.section`
   grid-template-columns: 1fr;
 
   img {
-    display: block;
-    width: 130px;
-    height: 170px;
+    width: 11em;
+    height: 14em;
     object-fit: cover;
-  }
-
-  .book-div {
-    margin-bottom: 10px;
   }
 `;

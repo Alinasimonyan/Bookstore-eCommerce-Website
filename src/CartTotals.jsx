@@ -24,15 +24,6 @@ export const CartTotals = () => {
           </h4>
         </article>
         <button className="checkout-btn">Checkout</button>
-        {/* {myUser ? (
-          <Link to="/checkout" className="btn">
-            proceed to checkout
-          </Link>
-        ) : (
-          <button onClick={loginWithRedirect} className="btn">
-            login
-          </button>
-        )} */}
       </div>
     </Wrapper>
   );

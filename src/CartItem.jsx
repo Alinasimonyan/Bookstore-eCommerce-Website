@@ -88,7 +88,7 @@ const Wrapper = styled.article`
     grid-template-columns: 1fr 1fr 1fr;
 
     button {
-      width: rem;
+      width: 1.5rem;
       height: 1.5rem;
       margin-top: 20px;
       margin-right: 25px;
@@ -117,7 +117,7 @@ const Wrapper = styled.article`
     cursor: pointer;
   }
 
-  @media (min-width: 776px) {
+  @media (min-width: 675px) {
     .subtotal {
       display: block;
       margin-bottom: 0;

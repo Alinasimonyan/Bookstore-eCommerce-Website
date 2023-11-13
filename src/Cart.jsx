@@ -7,7 +7,16 @@ import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const { cart, clearCart } = useCartContext();
-
+  if (cart.length <= 0) {
+    return (
+      <EmptyCart>
+        <h1>Your Cart is Empty!</h1>
+        <Link to="/books">
+          <button className="cart-btn">Explore Books</button>
+        </Link>
+      </EmptyCart>
+    );
+  }
   return (
     <Wrapper>
       <div className="section">
@@ -26,7 +35,7 @@ export const Cart = () => {
               className="clear-cart-btn"
               onClick={clearCart}
             >
-              Clear Shopping Cart
+              Clear Cart
             </button>
           </div>
           <CartTotals />
@@ -43,13 +52,11 @@ const Wrapper = styled.section`
   .section-center {
     width: 90vw;
     margin: 0 auto;
-    max-width: var(--max-width);
   }
 
   .link-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
   }
 
   .cart-btn,
@@ -57,7 +64,6 @@ const Wrapper = styled.section`
     background: hsl(360, 67%, 44%);
     color: #fff;
     border-color: transparent;
-    // padding: 0.25rem 2.5rem;
     padding-bottom: 1.5rem;
     padding-top: 0.3rem;
     border-radius: 0.25rem;
@@ -82,5 +88,49 @@ const Wrapper = styled.section`
   .clear-cart-btn {
     width: 250px;
     height: 30px;
+  }
+
+  @media (max-width: 675px) {
+    .link-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .link-container button {
+      width: 11em;
+    }
+  }
+`;
+
+const EmptyCart = styled.section`
+  margin-left: 40%;
+  margin-top: 10%;
+  color: #a9a9a9;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+
+  .cart-btn {
+    background: hsl(360, 67%, 44%);
+    color: #fff;
+    border-color: transparent;
+    padding-bottom: 1.5rem;
+    padding-top: 0.3rem;
+    border-radius: 0.25rem;
+    width: 220px;
+    height: 25px;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+
+  .cart-btn:hover {
+    background: hsl(0, 89%, 93%);
+    color: #130707;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+
+  
   }
 `;

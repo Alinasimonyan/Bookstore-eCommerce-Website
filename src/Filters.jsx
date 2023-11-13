@@ -1,6 +1,8 @@
 import { getCategories } from "./GetCategories";
 import { useFilterContext } from "./BookReducer";
 import styled from "styled-components";
+import { GenresLargeScreen } from "./Genres";
+// import { GenresSmallScreen } from "./Genres";
 
 export const Filters = () => {
   const {
@@ -10,7 +12,6 @@ export const Filters = () => {
     clearFilters,
   } = useFilterContext();
 
-  const genres = getCategories(all_products, "genre");
   const publishers = getCategories(all_products, "publisher");
 
   return (
@@ -28,23 +29,12 @@ export const Filters = () => {
             />
           </div>
 
-          <div className="form-control">
-            <h5>Genres</h5>
-            <div>
-              {genres.map((genre, index) => {
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    name="genre"
-                    onClick={updateFilters}
-                  >
-                    {genre}
-                  </button>
-                );
-              })}
-            </div>
+          <div className="form-control genre-large-screen">
+            <GenresLargeScreen />
           </div>
+          {/* <div className="form-control genre-small-screen">
+            <GenresSmallScreen />
+          </div> */}
 
           <div className="form-control">
             <h5>Publishers</h5>
@@ -97,6 +87,13 @@ export const Filters = () => {
 };
 
 const Wrapper = styled.section`
+  .form-control h5 {
+    font-size: 1rem;
+  }
+  .genre-small-screen {
+    display: none;
+  }
+
   margin-top: 50px;
   .form-control {
     margin-bottom: 1.25rem;
@@ -117,6 +114,7 @@ const Wrapper = styled.section`
     border-radius: 5px;
     border-color: transparent;
     width: 100px;
+    font-size: 1rem;
   }
   .search-input::placeholder {
     text-transform: capitalize;
@@ -165,7 +163,7 @@ const Wrapper = styled.section`
     align-items: center;
     text-transform: capitalize;
     column-gap: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .clear-btn {
     background: hsl(360, 67%, 44%);
@@ -174,5 +172,19 @@ const Wrapper = styled.section`
     border-radius: 0.25rem;
     margin-top: 50px;
     margin-left: 90px;
+  }
+
+  .category_filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-btn {
+    border-color: transparent;
+    background-color: white;
+  }
+
+  .filter-btn:hover {
+    cursor: pointer;
   }
 `;

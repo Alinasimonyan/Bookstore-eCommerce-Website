@@ -78,18 +78,11 @@ const Wrapper = styled.section`
     flex-direction: row;
     margin-top: 70px;
     margin-bottom: 100px;
-    margin-left: 520px;
+    margin-left: 50%;
     width: 70px;
     gap: 25px;
   }
   .icon-section a {
     color: black;
-  }
-
-  @media (max-width: 675px) {
-    .icon-section {
-      width: 20px;
-      margin-left: 8em;
-    }
   }
 `;

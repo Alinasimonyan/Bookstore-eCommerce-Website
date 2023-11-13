@@ -16,9 +16,13 @@ export const BookList = () => {
     <>
       <Quote />
       <Wrapper>
-        <Filters />
-        <div>
-          <Sort />
+        <div className="filter-section">
+          <Filters />
+        </div>
+        <div className="books-display">
+          <div className="sort-section">
+            <Sort />
+          </div>
           <Grid_List_Btn />
           {grid_view ? (
             <GridView products={products} />
@@ -36,10 +40,13 @@ export const BookList = () => {
 const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
-  margin-right: 150px;
+  margin-top: 7em;
+  margin-right: 10em;
 
   @media (max-width: 675px) {
-  
+    .filter-section,
+    .sort-section {
+      display: none;
+    }
   }
 `;

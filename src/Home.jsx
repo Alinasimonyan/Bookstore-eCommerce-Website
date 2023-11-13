@@ -8,11 +8,11 @@ export const Home = () => {
         <div className="home-first-info">
           <div className="stripes"></div>
           <div className="home-info">
+            <h1 className="mini-title">Art Book Bookstore</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
               iste, obcaecati at exercitationem suscipit deleniti aut asperiores
-              officiis placeat, nobis debitis dolorem nesciunt. Error dicta eos
-              amet eius cupiditate quas.
+              officiis placeat, nobis debitis dolorem nesciunt.
             </p>
           </div>
           <Link to="/books">
@@ -37,6 +37,7 @@ export const Home = () => {
 };
 
 const Wrapper = styled.section`
+  letter-spacing: 0.1rem;
   .home-first {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,17 +68,6 @@ const Wrapper = styled.section`
     margin-right: 200px;
     margin-left: -250px;
     margin-top: 405px;
-  }
-
-  .home-first h1 {
-    text-transform: uppercase;
-    color: rgb(255, 231, 145);
-    font-size: 17px;
-    padding: 10px;
-    width: 150px;
-    border-radius: 5px;
-    margin-bottom: -40px;
-    width: 250px;
   }
 
   .home-info p {
@@ -119,40 +109,66 @@ const Wrapper = styled.section`
     transition: background-color 0.5s ease;
   }
 
+  .mini-title {
+    display: none;
+  }
+
+  .books-mini {
+    display: none;
+  }
+
   @media (max-width: 675px) {
     .stripes {
       display: none;
     }
 
+    .mini-title {
+      display: block;
+      margin-left: 35%;
+      text-align: center;
+      color: hsl(360, 67%, 44%);
+    }
+
     .home-first {
+      width: 80%;
       display: flex;
       flex-direction: column;
       padding: 5em;
-      margin: 0 auto;
+      margin: 0 2em;
+    }
+
+    .home-first-info {
+      width: 100%;
     }
 
     .home-info {
       border-radius: 3%;
-      background-color: black;
-      width: 18.5em;
-      height: 350px;
-      margin-bottom: 0.5em;
-      margin-left: 15px;
+      background-color: white;
+      width: 100%;
+      margin-top: 10%;
+      margin-left: -4em;
+      margin-bottom: -5.5em;
     }
+
+    .home-info h1 {
+      margin-bottom: -2em;
+    }
+
     .home-info p {
       text-align: start;
+      width: 100%;
     }
+
     .home-first button {
       display: none;
     }
 
     .extra-info {
-      width: 16em;
-      margin-left: 1em;
-      margin-bottom: 0.3em;
-      margin-top: 2em;
+      margin-top: -2em;
+      margin-bottom: 3em;
+      width: 90%;
+      height: 12em;
       padding: 1em;
-      height: 18em;
       border: 5px solid rgb(214, 209, 209);
       border-radius: 3%;
     }
@@ -163,11 +179,10 @@ const Wrapper = styled.section`
     }
 
     .home-first img {
-      width: 18.5em;
-      height: 20em;
-      border-radius: 3%;
+      width: 98%;
+      border-radius: 2%;
       margin-top: 1em;
-      margin-left: -5em;
+      margin-left: -6em;
     }
   }
 `;

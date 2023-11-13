@@ -67,5 +67,7 @@ column-gap: 2rem;
     /* box-shadow: 2px 2px 5px #b4b0ae; */
   }
 
- 
+  @media (max-width: 675px) {
+    display: none;
+  }
 `;

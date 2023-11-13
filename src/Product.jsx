@@ -6,7 +6,7 @@ const Product = ({ id, title, author, image, price }) => {
     <Wrapper>
       <Link to={`/books/${id}`} className="link">
         <img src={image} alt={title} style={{ borderRadius: "5px" }} />
-        <div>
+        <div className="book-info">
           <p>
             {title} by {author}
           </p>
@@ -25,6 +25,15 @@ const Wrapper = styled.section`
     font-size: 14px;
   }
   a:hover {
-    color: brown;
+    color: grey;
+  }
+  img {
+    width: 11em;
+    height: 14em;
+  }
+  .book-info {
+    letter-spacing: 0.05rem;
+    width: 11em;
+    font-size: 0.9rem;
   }
 `;

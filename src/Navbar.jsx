@@ -2,33 +2,41 @@ import { NavLink } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaUserPlus } from "react-icons/fa";
 import styled from "styled-components";
+import { useSideBarContext } from "./SidebarContext";
+
+import { Sidebar } from "./Sidebar";
+import { SidebarMenu } from "./SidebarMenu";
 
 export const Navbar = () => {
+  const { isSideBarOpen } = useSideBarContext();
   return (
-    <Wrapper>
-      <div>
-        <img
-          src="https://www.designevo.com/res/templates/thumb_small/white-hand-and-red-book.webp"
-          alt="logo"
-          className="logo"
-        />
-      </div>
-      <div className="navLinks">
-        <div className="home-about-books">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/books">Books</NavLink>
+    <>
+      <Wrapper>
+        <div>
+          <img
+            src="https://www.designevo.com/res/templates/thumb_small/white-hand-and-red-book.webp"
+            alt="logo"
+            className="logo"
+          />
+          {isSideBarOpen ? <Sidebar /> : <SidebarMenu />}
         </div>
-        <div className="cart-login">
-          <NavLink to="/cart">
-            Cart <FaCartArrowDown />
-          </NavLink>
-          <NavLink to="login">
-            Login <FaUserPlus />
-          </NavLink>
+        <div className="navLinks">
+          <div className="home-about-books">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/books">Books</NavLink>
+          </div>
+          <div className="cart-login">
+            <NavLink to="/cart">
+              Cart <FaCartArrowDown />
+            </NavLink>
+            <NavLink to="login">
+              Login <FaUserPlus />
+            </NavLink>
+          </div>
         </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </>
   );
 };
 
@@ -73,24 +81,9 @@ const Wrapper = styled.section`
     color: rgb(54, 54, 54);
   }
 
-  @media screen and (max-width: 675px) {
+  @media (max-width: 675px) {
     .navLinks {
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-    }
-
-    .navLinks a {
-      margin-bottom: 1em;
-    }
-
-    .home-about-books {
-      display: flex;
-      flex-direction: column;
-    }
-    .cart-login {
-      display: flex;
-      flex-direction: column;
+      display: none;
     }
   }
 `;
