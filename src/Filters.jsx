@@ -1,8 +1,7 @@
 import { getCategories } from "./GetCategories";
 import { useFilterContext } from "./BookReducer";
 import styled from "styled-components";
-import { GenresLargeScreen } from "./Genres";
-// import { GenresSmallScreen } from "./Genres";
+import { Genres } from "./Genres";
 
 export const Filters = () => {
   const {
@@ -30,11 +29,8 @@ export const Filters = () => {
           </div>
 
           <div className="form-control genre-large-screen">
-            <GenresLargeScreen />
+            <Genres />
           </div>
-          {/* <div className="form-control genre-small-screen">
-            <GenresSmallScreen />
-          </div> */}
 
           <div className="form-control">
             <h5>Publishers</h5>
@@ -78,10 +74,10 @@ export const Filters = () => {
             />
           </div>
         </form>
+        <button type="button" className="clear-btn" onClick={clearFilters}>
+          clear filters
+        </button>
       </div>
-      <button type="button" className="clear-btn" onClick={clearFilters}>
-        clear filters
-      </button>
     </Wrapper>
   );
 };
@@ -90,14 +86,10 @@ const Wrapper = styled.section`
   .form-control h5 {
     font-size: 1rem;
   }
-  .genre-small-screen {
-    display: none;
-  }
-
+  margin-left: 350px;
   margin-top: 50px;
   .form-control {
     margin-bottom: 1.25rem;
-    margin-right: 70px;
     h5 {
       margin-bottom: 0.5rem;
     }
@@ -105,6 +97,7 @@ const Wrapper = styled.section`
 
   .filter-section {
     display: flex;
+    flex-direction: column;
     justify-content: right;
   }
 
@@ -118,19 +111,6 @@ const Wrapper = styled.section`
   }
   .search-input::placeholder {
     text-transform: capitalize;
-  }
-
-  button {
-    display: block;
-    margin: 0.25em 0;
-    padding: 0.25rem 0;
-    text-transform: capitalize;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid transparent;
-    letter-spacing: 0.1rem;
-    color: hsl(210, 22%, 49%);
-    cursor: pointer;
   }
 
   .publisher-btn {
@@ -158,20 +138,27 @@ const Wrapper = styled.section`
     margin-bottom: 0.25rem;
   }
   .shipping {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
     text-transform: capitalize;
     column-gap: 0.5rem;
     font-size: 0.9rem;
+    padding: 3px;
   }
+
   .clear-btn {
     background: hsl(360, 67%, 44%);
+    border-color: transparent;
+    letter-spacing: 0.1rem;
     color: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    margin-top: 50px;
-    margin-left: 90px;
+    width: 10em;
+    margin-top: 30px;
+  }
+
+  .clear-btn:hover {
+    cursor: pointer;
   }
 
   .category_filter {
@@ -186,5 +173,16 @@ const Wrapper = styled.section`
 
   .filter-btn:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 675px) {
+    margin-left: 2em;
+    .clear-btn,
+    button {
+      margin-left: 2em;
+    }
+    button {
+      margin-left: 0.5em;
+    }
   }
 `;

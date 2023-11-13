@@ -16,19 +16,19 @@ export const BookList = () => {
     <>
       <Quote />
       <Wrapper>
-        <div className="filter-section">
-          <Filters />
-        </div>
+        <Filters />
         <div className="books-display">
           <div className="sort-section">
             <Sort />
           </div>
-          <Grid_List_Btn />
-          {grid_view ? (
-            <GridView products={products} />
-          ) : (
-            <ListView products={products} />
-          )}
+          <div className="book-section">
+            <Grid_List_Btn />
+            {grid_view ? (
+              <GridView products={products} />
+            ) : (
+              <ListView products={products} />
+            )}
+          </div>
         </div>
       </Wrapper>
     </>
@@ -41,12 +41,8 @@ const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 7em;
-  margin-right: 10em;
-
-  @media (max-width: 675px) {
-    .filter-section,
-    .sort-section {
-      display: none;
-    }
+  margin-right: 70px;
+  .filter-button {
+    display: none;
   }
 `;

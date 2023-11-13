@@ -74,9 +74,10 @@ const Wrapper = styled.section`
     padding: 1rem 0.5rem;
     color: hsl(209, 34%, 30%);
     letter-spacing: 0.1rem;
-    transition: all 0.3s linear;
   }
-
+  .sidebar-nav-links a:hover {
+    color: black;
+  }
   .close-btn {
     font-size: 2rem;
     background: transparent;

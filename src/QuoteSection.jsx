@@ -40,11 +40,11 @@ const Wrapper = styled.section`
 
   @media (max-width: 675px) {
     .quote-section {
-      padding-bottom: 1.5em;
       height: 100px;
     }
     .quote-text {
       margin-right: 2em;
+      margin-bottom: 1.5em;
     }
   }
 `;

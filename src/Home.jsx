@@ -67,7 +67,7 @@ const Wrapper = styled.section`
     border-radius: 50%;
     margin-right: 200px;
     margin-left: -250px;
-    margin-top: 405px;
+    margin-top: 395px;
   }
 
   .home-info p {
@@ -93,12 +93,12 @@ const Wrapper = styled.section`
   }
 
   .home-first button {
-    background: hsl(360, 67%, 44%);
     width: 350px;
+    background: hsl(360, 67%, 44%);
     color: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    margin-top: -60px;
+    margin-bottom: -75px;
     margin-left: 170px;
     border-color: transparent;
   }

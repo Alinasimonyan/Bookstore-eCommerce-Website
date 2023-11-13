@@ -1,9 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaUserPlus } from "react-icons/fa";
 import styled from "styled-components";
 import { useSideBarContext } from "./SidebarContext";
-
 import { Sidebar } from "./Sidebar";
 import { SidebarMenu } from "./SidebarMenu";
 
@@ -27,12 +26,12 @@ export const Navbar = () => {
             <NavLink to="/books">Books</NavLink>
           </div>
           <div className="cart-login">
-            <NavLink to="/cart">
-              Cart <FaCartArrowDown />
-            </NavLink>
-            <NavLink to="login">
-              Login <FaUserPlus />
-            </NavLink>
+            <Link to="/cart">
+              <FaCartArrowDown />
+            </Link>
+            <Link to="login">
+              <FaUserPlus />
+            </Link>
           </div>
         </div>
       </Wrapper>
@@ -52,6 +51,7 @@ const Wrapper = styled.section`
   .navLinks {
     margin-top: 30px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
@@ -67,8 +67,11 @@ const Wrapper = styled.section`
 
   .cart-login {
     display: flex;
-    justify-content: space-between;
-    margin-right: 3em;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 1em;
+    margin-top: 5px;
   }
 
   .cart-login a {
